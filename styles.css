@@ -1,0 +1,131 @@
+:root {
+  /* variables */
+  --g-black: rgb(2, 32, 0);
+  --l-green: rgb(155, 188, 143);
+  --n-green: rgb(56, 87, 44);
+  --g-white: rgb(236, 246, 232);
+}
+*{
+    font-family: "Times New Roman", Times, serif;
+    color: --g-black;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: white;
+  position: relative;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+    font-family: sans-serif;
+    font-weight: normal;
+}
+
+main {
+  padding: 0 20px 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CSS for navigation bar */
+
+.navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 7%;
+  z-index: 10;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+
+  background-color: var(--g-black);
+  color: white;
+  padding: 0px 0px;
+
+  /* Debug border */
+  /* border: solid red; */
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  right: 30px;
+  list-style: none;
+}
+
+.navbar a {
+  color: white;
+  font-weight: bold;
+  margin: 0 12px;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+.navbar a:hover {
+    color: --l-green;
+    border-color: rgb(10, 47, 2);
+    /*border-style: solid;
+    border-width: 1px;*/
+}
+
+/* CSS for resume page */
+
+.button {
+  background-color: var(--n-green);
+  border: solid;
+  color: var(--g-white);
+
+  font-family: sans-serif;
+  font-size: 14px;
+
+  padding: 5.5px 7px;
+  text-align: center;
+
+  border-radius: 2px;
+}
+
+.button:hover {
+  background-color: var(--l-green);
+  color: white;
+}
+
+/* CSS for contact input */
+/* all input tages w/ req. attribute */
+input[required] {
+    text-decoration: underline;
+}
+/* all input tags w/ this type attribute */
+input[type=text] {
+    height: 10%;
+    width: 10%;
+}
+input:focus {
+  border: 1px solid #184710;
+}
+
+/* CSS for page footer */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--g-black);
+  color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
